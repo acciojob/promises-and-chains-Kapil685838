@@ -6,6 +6,7 @@ userDetails.addEventListener('onsubmit', promiseResolve);
 
 function promiseResolve(event){
 	return new Promise((resolve, reject) => {
+		event.preventDefault();
 		setTimeout(() => {
 			if(document.getElementById('age').value >= 18){
 				resolve(alert(`Welcome, ${document.getElementById('name').value}. You can vote.`));
